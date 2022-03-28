@@ -7,7 +7,7 @@ from Testdata.test_dataDriven import TestData
 
 def pytest_addoption(parser):
     parser.addoption(
-        "--browser", action="store", default="type1", help="my option: type1 or type2"
+        "--browser", action="store", default="chrome", help="my option: type1 or type2"
     )
 
 
@@ -27,6 +27,3 @@ def setup(request):
     request.cls.driver = driver
     yield
     driver.close()
-
-
-
